@@ -1,7 +1,22 @@
 import { Header } from "../../Components/Header"
 import { Container, Cont } from "./style"
-
+import Lampada from "../../Assets/Lampadas.png"
+import Baterias from "../../Assets/Baterias.png"
+import Oleo from "../../Assets/Oleo.png"
+import Organicos from "../../Assets/Organicos.png"
+import Papeis from "../../Assets/Papeis.png"
+import Eletronicos from "../../Assets/Eletronicos.png"
 export const Cadastro = () => {
+    const data = [
+        { title: "Lampadas", img: Lampada },
+        { title: "Pilhas e Baterias", img: Baterias },
+        { title: "Papéis e Papelão", img: Papeis },
+        { title: "Pilhas e Baterias", img: Eletronicos },
+        { title: "Resíduos Orgânicos", img: Organicos },
+        { title: "Óleo de Cozinha", img: Oleo },
+    
+    ]
+
     return (
         <Container>
             <Header />
@@ -19,7 +34,7 @@ export const Cadastro = () => {
                             Endereço
                             <input type="text" />
                         </label>
-                        <label  className="numero">
+                        <label className="numero">
                             Número
                             <input type="text" />
                         </label>
@@ -41,12 +56,17 @@ export const Cadastro = () => {
                             <span>Selecione um ou mais ítens abaixo</span>
                         </div>
                         <div className="checkbox-cont-card">
-                            <label className="checkbox-card">
-                                <img src="" alt="icone"/>
-                                <input type="checkbox" name="categoria"/>
-                            </label>
+                            {data.map(each => {
+                                return (
+                                    <label className="checkbox-card">
+                                        <img src={each.img} alt={each.title} />
+                                        <span>{each.title}</span>
+                                        <input type="checkbox" name="categoria" />
+                                    </label>
+                                )
+                            })}
                         </div>
-                       
+
                     </div>
 
                     <button className="btn-form" type="submit">Cadastrar ponto de coleta</button>

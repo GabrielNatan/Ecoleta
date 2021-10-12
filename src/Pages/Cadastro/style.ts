@@ -89,7 +89,7 @@ export const Cont =  styled.div`
                 display: flex;
                 gap:16px;
                 flex-wrap:wrap;
-
+                margin-bottom: 64px;
                 .checkbox-card{
                     width: 192px;
                     height: 184px;
@@ -101,6 +101,20 @@ export const Cont =  styled.div`
                     gap: 20px;
                     background-color: var(--desaturado);
                     margin-bottom: 0px;
+                    position: relative;
+                    cursor: pointer;
+
+                    span{
+                        width: 80px;
+                        font-size: var(----secondary-title-font);
+                        color: var(--titulos);
+                        text-align:center;
+                        font-weight: bolder;
+                    }
+                    input{
+                        visibility: hidden;
+                        position: absolute;
+                    }
                 }
             }
 
