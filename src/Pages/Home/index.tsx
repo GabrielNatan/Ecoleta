@@ -3,12 +3,19 @@ import Search from "../../Assets/Buscar.png"
 import People from "../../Assets/Pessoinhas.png"
 import Background from "../../Assets/Background.png"
 import { Header } from "../../Components/Header"
+import { ModalComponent } from "../../Components/Modal"
+import { SearchHome } from "../../Components/SearchHome"
+
+
+
 export const Home = ()=>{
     return(
         <Container>
             <Header/>
+            <ModalComponent>
+                <SearchHome/>
+            </ModalComponent>
             <div className="home-container">
-                
                 <div className="home-left">
                     <h1>Seu marketplace de coleta de resíduos.</h1>
                     <p>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</p>

@@ -6,6 +6,7 @@ export const Container =  styled.div`
     flex-direction: column;
     height: 100vh;
     overflow: hidden;
+
     .background{
         width: 1000px;
         position: absolute;
